@@ -14,10 +14,13 @@ public class TodoMain {
 		TodoList l = new TodoList();
 		boolean isList = false;
 		boolean quit = false;
+		TodoUtil.loadList(l,"todolist");
+		Menu.displaymenu();
+		
 		do {
-			Menu.displaymenu();
+			System.out.print("Command > ");
 			isList = false;
-			String choice = sc.next();
+			String choice = sc.next().trim();
 			switch (choice) {
 
 			case "add":
@@ -39,29 +42,40 @@ public class TodoMain {
 			case "ls_name_asc":
 				l.sortByName();
 				isList = true;
+				System.out.println("항목이 제목순으로 나열되었습니다!");
 				break;
 
 			case "ls_name_desc":
 				l.sortByName();
 				l.reverseList();
+				System.out.println("항목이 제목역순으로 나열되었습니다!");
 				isList = true;
 				break;
 				
 			case "ls_date":
 				l.sortByDate();
+				System.out.println("항목이 날짜순으로 나열되었습니다!");
 				isList = true;
 				break;
 
 			case "exit":
+				System.out.println("프로그램을 종료합니다!");
 				quit = true;
 				break;
 
-			default:
-				System.out.println("please enter one of the above mentioned command");
+			case "help":
+				Menu.displaymenu();
 				break;
+				
+			default:
+				System.out.println("정확한 명령어를 입력해 주세요. (도움말 - help)");
+				break;
+				
 			}
 			
 			if(isList) l.listAll();
 		} while (!quit);
+		
+		TodoUtil.saveList(l,"todolist");
 	}
 }
