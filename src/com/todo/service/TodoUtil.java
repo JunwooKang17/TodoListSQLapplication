@@ -55,18 +55,30 @@ public class TodoUtil {
 		
 		System.out.print("\n"
 				+ "[항목 삭제]\n"
-				+ "삭제할 항목의 제목을 입력하세요 > ");
+				+ "삭제할 항목의 번호를 입력하세요 > ");
 		int num = sc.nextInt();
 		sc.nextLine();
 		
 		
+		
+		
 		int i =1;
+		count = 1;
 		for (TodoItem item : l.getList()) {
 			if (i==num) {
+				System.out.println(count+". "+item.toString());
+				System.out.print("위 항목을 정말 삭제 하시겠습니까? (y/n) > ");
+				String w = sc.next().trim();
+				switch(w) {
+					case "y":
 				l.deleteItem(item);
-			System.out.println("항목이 삭제되었습니다!");
+				System.out.println("항목이 삭제되었습니다!");
 				break;
+					default:
+						break;
+				}
 			}
+			count++;
 			i++;
 		}
 	}
