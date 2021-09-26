@@ -67,6 +67,25 @@ public class TodoMain {
 				Menu.displaymenu();
 				break;
 				
+			case "find":
+				String f_title = sc.next().trim();
+				TodoUtil.findTitle(l, f_title);
+				break;
+				
+			case "ls_date_desc":
+				l.sortByDate();
+				l.reverseList();
+				System.out.println("항목이 날짜순으로 나열되었습니다!");
+				break;
+			
+			case "find_cate":
+				String f_category = sc.next().trim();
+				TodoUtil.findCate(l, f_category);
+				break;
+				
+			case "ls_cate":
+				TodoUtil.ls_cate(l);
+				break;
 			default:
 				System.out.println("정확한 명령어를 입력해 주세요. (도움말 - help)");
 				break;
