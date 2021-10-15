@@ -15,8 +15,12 @@ public class Menu {
         System.out.println("8. 검색 ( find 'word' )");
         System.out.println("9. 날짜 역순 정렬 (ls_date_desc )");
         System.out.println("10. 카테고리 키워드 (find_cate 'word's )");
-        System.out.println("11. 모든 카테고리 보여주기 (ls_cate)");
-        System.out.println("12. 종료  (exit)");
+        System.out.println("11. 완료된것 표시하기 (comp '#')");
+        System.out.println("12. 모든 완료된 목록 보여주기 (ls_comp)");
+        System.out.println("13. 우선적으로 해야하는 것 *표하기 (set_priori)");
+        System.out.println("14. 우선적으로 해야하는 것들 목록 보여주기 (ls_priori)");
+        System.out.println("15. 모든 duedate보다 늦은 목록 보여주기 (ls_late)");
+        System.out.println("16. 종료  (exit)");
         
     }
     
