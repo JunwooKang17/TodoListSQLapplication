@@ -1,12 +1,1 @@
-휴식##낮잠##마감일까지 낮잠자기##2021/10/01##2021/09/26 12:37:59
-건강##금주##마감일자까지 술 안마시기##2021/09/30##2021/09/26 12:37:58
-건강##금연##마감일자까지 금연하기##2021/09/29##2021/09/26 12:37:57
-친목##새내기##새내기 밥고##2021/09/28##2021/09/26 12:37:56
-운동##암스##암스트롱 정모##2021/09/27##2021/09/26 12:37:55
-운동##홀램##홀림램스 정모##2021/09/26##2021/09/26 12:37:54
-과목##이산수학##이산수학 과제하기##2021/09/25##2021/09/26 12:37:53
-약속##한동한바퀴##팀모임##2021/09/25##2021/09/26 12:37:52
-과목##실프과제##4주차 과제하기##2021/09/27##2021/09/26 12:37:51
-운동##헬스##스쿼트, 윗몸 100개씩##2021/09/26##2021/09/26 12:37:50
-삭제##삭제##삭제될꺼야##오늘##2021/09/26 14:12:03
-howareyou##hi##imfineThanks##dhsmf##2021/09/26 14:14:27
+[{"title":"낮잠","desc":"마감일까지 낮잠자기","current_date":"낮잠","category":"휴식","due_date":"2021/10/01","id":1,"is_completed":1,"priority":1,"late":1},{"title":"금주","desc":"마감일자까지 술 안마시기","current_date":"2021/09/26 12:37:58","category":"건강","due_date":"2021/09/30","id":2,"is_completed":1,"priority":1,"late":1},{"title":"금연","desc":"마감일자까지 금연하기","current_date":"2021/09/26 12:37:57","category":"건강","due_date":"2021/09/29","id":3,"is_completed":1,"priority":0,"late":1},{"title":"암스","desc":"암스트롱 정모","current_date":"2021/09/26 12:37:55","category":"운동","due_date":"2021/09/27","id":4,"is_completed":1,"priority":1,"late":1},{"title":"홀램","desc":"홀림램스 정모","current_date":"2021/09/26 12:37:54","category":"운동","due_date":"2021/09/26","id":5,"is_completed":0,"priority":0,"late":1},{"title":"이산수학","desc":"이산수학 과제하기","current_date":"2021/09/26 12:37:53","category":"과목","due_date":"2021/09/25","id":6,"is_completed":0,"priority":0,"late":1},{"title":"한동한바퀴","desc":"팀모임","current_date":"2021/09/26 12:37:52","category":"약속","due_date":"2021/09/25","id":7,"is_completed":1,"priority":0,"late":1},{"title":"실프과제","desc":"4주차 과제하기","current_date":"2021/09/26 12:37:51","category":"과목","due_date":"2021/09/27","id":8,"is_completed":0,"priority":0,"late":1},{"title":"헬스","desc":"스쿼트, 윗몸 100개씩","current_date":"2021/09/26 12:37:50","category":"운동","due_date":"2021/09/26","id":9,"is_completed":0,"priority":1,"late":1},{"title":"운동","desc":"다리찢기","current_date":"운동","category":"운동","due_date":"2021/11/10","id":10,"is_completed":1,"priority":1,"late":0},{"title":"과제","desc":"실프과제","current_date":"2021/10/16 02:50:19","category":"과제","due_date":"2021/10/16","id":11,"is_completed":0,"priority":0,"late":0}]

@@ -12,12 +12,14 @@ public class TodoMain {
 	
 		Scanner sc = new Scanner(System.in);
 		TodoList l = new TodoList();
+		//l.importData("todolist");
 		boolean isList = false;
 		boolean quit = false;
 		TodoUtil.loadList(l,"todolist");
 		Menu.displaymenu();
 		
 		do {
+			TodoUtil.setlateness(l);
 			System.out.print("Command > ");
 			isList = false;
 			String choice = sc.next().trim();
@@ -40,22 +42,22 @@ public class TodoMain {
 				break;
 
 			case "ls_name_asc":
-				l.sortByName();
-				isList = true;
+				TodoUtil.listAll(l, "title", 1);
+				
 				System.out.println("항목이 제목순으로 나열되었습니다!");
 				break;
 
 			case "ls_name_desc":
-				l.sortByName();
-				l.reverseList();
+				TodoUtil.listAll(l, "title", 0);
+			
 				System.out.println("항목이 제목역순으로 나열되었습니다!");
-				isList = true;
+				
 				break;
 				
 			case "ls_date":
-				l.sortByDate();
+				TodoUtil.listAll(l, "due_date", 1);
 				System.out.println("항목이 날짜순으로 나열되었습니다!");
-				isList = true;
+				
 				break;
 
 			case "exit":
@@ -69,12 +71,11 @@ public class TodoMain {
 				
 			case "find":
 				String f_title = sc.next().trim();
-				TodoUtil.findTitle(l, f_title);
+				TodoUtil.findList(l, f_title);
 				break;
 				
 			case "ls_date_desc":
-				l.sortByDate();
-				l.reverseList();
+				TodoUtil.listAll(l, "due_date", 0);
 				System.out.println("항목이 날짜순으로 나열되었습니다!");
 				break;
 			
@@ -88,6 +89,30 @@ public class TodoMain {
 				break;
 			default:
 				System.out.println("정확한 명령어를 입력해 주세요. (도움말 - help)");
+				break;
+				
+			case "comp":
+				int num = sc.nextInt();
+				sc.nextLine();
+				TodoUtil.comp(l, num);
+				break;
+		
+			case "ls_comp":
+				TodoUtil.listAll(l, 1);
+				break;
+				
+			case "set_priori":
+				num = sc.nextInt();
+				sc.nextLine();
+				TodoUtil.set_priori(l, num);
+				break;
+				
+			case "ls_priori":
+				TodoUtil.listAllp(l,1);
+				break;
+				
+			case "ls_late":
+				TodoUtil.listAllL(l, 1);
 				break;
 				
 			}
