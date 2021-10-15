@@ -74,7 +74,7 @@ public class TodoList {
 			pstmt.setString(1, t.getTitle());
 			pstmt.setString(2, t.getDesc());
 			pstmt.setString(3, t.getCategory());
-			pstmt.setString(4, t.getTitle());
+			pstmt.setString(4, t.getCurrent_date());
 			pstmt.setString(5, t.getDue_date());
 			pstmt.setInt(6, t.getId());
 			count = pstmt.executeUpdate();
@@ -278,6 +278,24 @@ public class TodoList {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, 1);
+			pstmt.setInt(2, id);
+			count = pstmt.executeUpdate();
+			pstmt.close();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return count;
+		
+	}
+	
+	public int setunlateness(int id) {
+		int count = 0;
+		String sql = "update list set late = ?" + "where id = ?";
+		PreparedStatement pstmt;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, 0);
 			pstmt.setInt(2, id);
 			count = pstmt.executeUpdate();
 			pstmt.close();

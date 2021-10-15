@@ -104,6 +104,8 @@ public class TodoUtil {
 				
 				TodoItem t = new TodoItem(new_title, new_description,new_category,new_due_date );
 				t.setId(num);
+				t.setIs_completed(0);
+				t.setPriority(0);
 				if(l.updateItem(t)>0)
 					System.out.println("항목이 수정되었습니다!");
 			
@@ -324,6 +326,8 @@ public class TodoUtil {
 		for (TodoItem myitem : l.getList()) {
 			if(myitem.getDue_date().compareTo(time)<0) {
 				l.setlateness(myitem.getId());
+			}else {
+					l.setunlateness(myitem.getId());
 			}
 		}
 		
